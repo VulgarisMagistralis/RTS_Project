@@ -1,5 +1,0 @@
-[gd_scene format=2]
-
-[node name="Visibility" type="Area2D"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
