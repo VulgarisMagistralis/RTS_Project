@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Buildings/town_center_3.png" type="Texture" id=1]
+[ext_resource path="res://Buildings/Town_Center.gd" type="Script" id=2]
+[ext_resource path="res://Area_Objects/Selectable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Buildings/Building_Preview.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 66.2814, 52.6168 )
+
+[sub_resource type="CircleShape2D" id=2]
+
+[node name="Town_Center" type="StaticBody2D" groups=[
+"Buildings",
+"minimap_objects",
+]]
+input_pickable = true
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 6.06498, -45.4549 )
+rotation = 0.132645
+scale = Vector2( 0.160466, 0.182282 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 63.6952, 63.8475 )
+shape = SubResource( 1 )
+
+[node name="Selectable" parent="." instance=ExtResource( 3 )]
+
+[node name="CollisionPolygon2D" parent="Selectable" index="0"]
+position = Vector2( 0, 0.55468 )
+scale = Vector2( 1, 0.996683 )
+polygon = PoolVector2Array( 1.38531, 0.154411, 127.745, 0.51339, 127.745, 126.873, 1.74429, 128.668 )
+
+[node name="Building_Preview" parent="." instance=ExtResource( 4 )]
+
+[node name="CollisionPolygon2D" parent="Building_Preview" index="1"]
+polygon = PoolVector2Array( 13.5909, 12.1028, -6.88287, 110.692, -3.73307, 124.866, 134.071, 123.448, 139.74, 108.644, 116.904, 13.9927 )
+
+[node name="Exit_Area" type="Area2D" parent="."]
+position = Vector2( 64.1133, 126.862 )
+monitoring = false
+monitorable = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit_Area"]
+position = Vector2( 0.272079, 1.04201 )
+shape = SubResource( 2 )
+[connection signal="mouse_entered" from="Selectable" to="." method="_on_Selectable_mouse_entered"]
+[connection signal="mouse_exited" from="Selectable" to="." method="_on_Selectable_mouse_exited"]
+
+[editable path="Selectable"]
+
+[editable path="Building_Preview"]

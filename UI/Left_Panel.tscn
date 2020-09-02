@@ -1,0 +1,271 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://UI/test_theme_1.theme" type="Theme" id=1]
+[ext_resource path="res://UI/TexturesCom_WoodBurned0064_1_S.jpg" type="Texture" id=2]
+[ext_resource path="res://UI/ubuntu/Ubuntu-R.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://UI/gold.png" type="Texture" id=4]
+[ext_resource path="res://UI/mini_house.png" type="Texture" id=5]
+[ext_resource path="res://UI/TexturesCom_WoodFine0074_10_seamless_S.jpg" type="Texture" id=6]
+[ext_resource path="res://UI/steak.png" type="Texture" id=7]
+[ext_resource path="res://UI/wood.png" type="Texture" id=8]
+[ext_resource path="res://UI/worker_2.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect"]
+margin_right = 100.0
+margin_bottom = 200.0
+theme = ExtResource( 1 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+flip_v = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top_Margin" type="Label" parent="VBoxContainer"]
+margin_right = 100.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 10, 10 )
+
+[node name="Stat_Panel" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Left_Margin" type="Label" parent="VBoxContainer/Stat_Panel"]
+visible = false
+margin_top = 163.0
+margin_right = 5.0
+margin_bottom = 183.0
+rect_min_size = Vector2( 5, 20 )
+
+[node name="Resources_List" type="VBoxContainer" parent="VBoxContainer/Stat_Panel"]
+margin_right = 50.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 50, 0 )
+
+[node name="Gold_Texture" type="TextureRect" parent="VBoxContainer/Stat_Panel/Resources_List"]
+margin_right = 50.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 30, 20 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Stat_Panel/Resources_List/Gold_Texture"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -4.0
+shortcut_in_tooltip = false
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Stat_Panel/Resources_List/Gold_Texture/TextureButton"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 88.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 30, 10 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.811765, 0.788235, 0, 1 )
+text = "3300 : 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Food_Texture" type="TextureRect" parent="VBoxContainer/Stat_Panel/Resources_List"]
+margin_top = 28.0
+margin_right = 50.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 30, 20 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Stat_Panel/Resources_List/Food_Texture"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -4.0
+shortcut_in_tooltip = false
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Stat_Panel/Resources_List/Food_Texture/TextureButton"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 90.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 30, 10 )
+custom_colors/font_color = Color( 0.992157, 0.160784, 0, 1 )
+text = "   3100 : 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wood_Texture" type="TextureRect" parent="VBoxContainer/Stat_Panel/Resources_List"]
+margin_top = 56.0
+margin_right = 50.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 30, 20 )
+texture = ExtResource( 8 )
+expand = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Stat_Panel/Resources_List/Wood_Texture"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.358963
+margin_top = -4.0
+margin_right = -6.35896
+shortcut_in_tooltip = false
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Stat_Panel/Resources_List/Wood_Texture/TextureButton"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 90.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 30, 10 )
+custom_colors/font_color = Color( 0.239216, 0.0901961, 0.0313726, 1 )
+text = "      1920 : 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Building_Texture" type="TextureRect" parent="VBoxContainer/Stat_Panel/Resources_List"]
+margin_top = 84.0
+margin_right = 50.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 30, 20 )
+texture = ExtResource( 5 )
+expand = true
+flip_h = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Stat_Panel/Resources_List/Building_Texture"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+shortcut_in_tooltip = false
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Stat_Panel/Resources_List/Building_Texture/TextureButton"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 81.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 30, 10 )
+custom_colors/font_color = Color( 0.239216, 0.0901961, 0.0313726, 1 )
+text = "      24"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Worker_Texture" type="TextureRect" parent="VBoxContainer/Stat_Panel/Resources_List"]
+margin_top = 112.0
+margin_right = 50.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 30, 20 )
+texture = ExtResource( 9 )
+expand = true
+flip_h = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Stat_Panel/Resources_List/Worker_Texture"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+shortcut_in_tooltip = false
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Stat_Panel/Resources_List/Worker_Texture/TextureButton"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 81.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 30, 10 )
+custom_colors/font_color = Color( 0.239216, 0.0901961, 0.0313726, 1 )
+text = "         8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Soldier_Texture" type="TextureRect" parent="VBoxContainer/Stat_Panel/Resources_List"]
+margin_top = 140.0
+margin_right = 50.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 30, 20 )
+texture = ExtResource( 9 )
+expand = true
+flip_h = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Stat_Panel/Resources_List/Soldier_Texture"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+shortcut_in_tooltip = false
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Stat_Panel/Resources_List/Soldier_Texture/TextureButton"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 81.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 30, 10 )
+custom_colors/font_color = Color( 0.239216, 0.0901961, 0.0313726, 1 )
+text = "         8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right_Margin" type="Label" parent="VBoxContainer/Stat_Panel"]
+margin_left = 58.0
+margin_top = 74.0
+margin_right = 78.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="Lower_Margin" type="Label" parent="VBoxContainer"]
+margin_top = 188.0
+margin_right = 100.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 20, 20 )
+theme = ExtResource( 1 )

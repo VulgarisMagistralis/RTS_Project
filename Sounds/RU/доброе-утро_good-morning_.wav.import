@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/доброе-утро_good-morning_.wav-3d72e297d2347deb55aaca4b16dd1d8b.sample"
+
+[deps]
+
+source_file="res://Sounds/RU/доброе-утро_good-morning_.wav"
+dest_files=[ "res://.import/доброе-утро_good-morning_.wav-3d72e297d2347deb55aaca4b16dd1d8b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
