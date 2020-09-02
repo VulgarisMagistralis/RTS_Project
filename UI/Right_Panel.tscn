@@ -1,0 +1,251 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://UI/test_theme_1.theme" type="Theme" id=1]
+[ext_resource path="res://UI/ubuntu/Ubuntu-R.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/TexturesCom_ConcreteBare0279_1_M.jpg" type="Texture" id=3]
+[ext_resource path="res://Buildings/barracks.png" type="Texture" id=4]
+[ext_resource path="res://Buildings/town_center_3.png" type="Texture" id=5]
+[ext_resource path="res://UI/Right_Panel.gd" type="Script" id=6]
+[ext_resource path="res://Worker/Idle/front/1.png" type="Texture" id=7]
+[ext_resource path="res://Soldiers/worker_2.png" type="Texture" id=8]
+[ext_resource path="res://Buildings/armoury.png" type="Texture" id=9]
+[ext_resource path="res://Buildings/barn_1.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="Right_Panel" type="TextureRect"]
+margin_left = 1700.0
+margin_right = 1920.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 120, 200 )
+theme = ExtResource( 1 )
+texture = ExtResource( 3 )
+expand = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 14.0
+margin_bottom = 100.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top_Margin" type="Label" parent="VBoxContainer"]
+margin_right = 234.0
+margin_bottom = 12.0
+
+[node name="Focus_Panel" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 20.0
+margin_right = 234.0
+margin_bottom = 179.0
+
+[node name="Left_Margin" type="Label" parent="VBoxContainer/Focus_Panel"]
+margin_top = 69.0
+margin_right = 5.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 5, 20 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Focus_Panel"]
+margin_left = 13.0
+margin_right = 145.0
+margin_bottom = 159.0
+
+[node name="Object_Title" type="Label" parent="VBoxContainer/Focus_Panel/VBoxContainer"]
+margin_right = 132.0
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.298039, 0.231373, 1 )
+text = "Select an object"
+
+[node name="ID_Holder" type="Label" parent="VBoxContainer/Focus_Panel/VBoxContainer"]
+visible = false
+margin_top = 27.0
+margin_right = 113.0
+margin_bottom = 39.0
+
+[node name="Building_Buttons" type="HBoxContainer" parent="VBoxContainer/Focus_Panel/VBoxContainer"]
+margin_top = 27.0
+margin_right = 132.0
+margin_bottom = 47.0
+
+[node name="Town_Center" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Building_Buttons"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armoury" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Building_Buttons"]
+margin_left = 28.0
+margin_right = 48.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 9 )
+expand = true
+
+[node name="Barracks" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Building_Buttons"]
+margin_left = 56.0
+margin_right = 76.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="Barn" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Building_Buttons"]
+margin_left = 84.0
+margin_right = 104.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 10 )
+expand = true
+
+[node name="Town_Center_Buttons" type="HBoxContainer" parent="VBoxContainer/Focus_Panel/VBoxContainer"]
+margin_top = 55.0
+margin_right = 132.0
+margin_bottom = 75.0
+
+[node name="Worker" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Town_Center_Buttons"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 7 )
+expand = true
+
+[node name="Armoury_Buttons" type="HBoxContainer" parent="VBoxContainer/Focus_Panel/VBoxContainer"]
+margin_top = 83.0
+margin_right = 132.0
+margin_bottom = 103.0
+
+[node name="Blade" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Armoury_Buttons"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+expand = true
+
+[node name="Pierce" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Armoury_Buttons"]
+margin_left = 28.0
+margin_right = 48.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+expand = true
+
+[node name="Pierce_Defence" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Armoury_Buttons"]
+margin_left = 56.0
+margin_right = 76.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+expand = true
+
+[node name="Blade_Defence" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Armoury_Buttons"]
+margin_left = 84.0
+margin_right = 104.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+expand = true
+
+[node name="Catapult_Projectile" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Armoury_Buttons"]
+margin_left = 112.0
+margin_right = 132.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+expand = true
+
+[node name="Barracks_Buttons" type="HBoxContainer" parent="VBoxContainer/Focus_Panel/VBoxContainer"]
+margin_top = 111.0
+margin_right = 132.0
+margin_bottom = 131.0
+
+[node name="Soldier" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Barracks_Buttons"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 8 )
+expand = true
+
+[node name="Archer" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Barracks_Buttons"]
+margin_left = 28.0
+margin_right = 48.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 8 )
+expand = true
+
+[node name="Catapult" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Barracks_Buttons"]
+margin_left = 56.0
+margin_right = 76.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 8 )
+expand = true
+
+[node name="Training" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Barracks_Buttons"]
+margin_left = 84.0
+margin_right = 104.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+expand = true
+
+[node name="Barn_Buttons" type="HBoxContainer" parent="VBoxContainer/Focus_Panel/VBoxContainer"]
+margin_top = 139.0
+margin_right = 132.0
+margin_bottom = 159.0
+
+[node name="Farm_Better" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Barn_Buttons"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+expand = true
+
+[node name="Gather_Better" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Barn_Buttons"]
+margin_left = 28.0
+margin_right = 48.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+expand = true
+
+[node name="Mine_Better" type="TextureButton" parent="VBoxContainer/Focus_Panel/VBoxContainer/Barn_Buttons"]
+margin_left = 56.0
+margin_right = 76.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+expand = true
+
+[node name="Right_Margin" type="Label" parent="VBoxContainer/Focus_Panel"]
+margin_left = 153.0
+margin_top = 69.0
+margin_right = 153.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="Lower_Margin" type="Label" parent="VBoxContainer"]
+margin_top = 187.0
+margin_right = 234.0
+margin_bottom = 199.0
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Building_Buttons/Town_Center" to="." method="_on_Town_Center_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Building_Buttons/Armoury" to="." method="_on_Armoury_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Building_Buttons/Barracks" to="." method="_on_Barracks_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Building_Buttons/Barn" to="." method="_on_Barn_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Town_Center_Buttons/Worker" to="." method="_on_Worker_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Armoury_Buttons/Blade" to="." method="_on_Blade_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Armoury_Buttons/Pierce" to="." method="_on_Pierce_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Armoury_Buttons/Pierce_Defence" to="." method="_on_Pierce_Defence_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Armoury_Buttons/Blade_Defence" to="." method="_on_Blade_Defence_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Armoury_Buttons/Catapult_Projectile" to="." method="_on_Catapult_Projectile_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Barracks_Buttons/Soldier" to="." method="_on_Soldier_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Barracks_Buttons/Archer" to="." method="_on_Archer_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Barracks_Buttons/Catapult" to="." method="_on_Catapult_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Barracks_Buttons/Training" to="." method="_on_Training_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Barn_Buttons/Farm_Better" to="." method="_on_Farm_Better_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Barn_Buttons/Gather_Better" to="." method="_on_Gather_Better_pressed"]
+[connection signal="pressed" from="VBoxContainer/Focus_Panel/VBoxContainer/Barn_Buttons/Mine_Better" to="." method="_on_Mine_Better_pressed"]

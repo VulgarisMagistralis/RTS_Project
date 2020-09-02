@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/selvflgeligof-course.wav-11a27199e54d2bb19de5f80fdb1ee0fe.sample"
+
+[deps]
+
+source_file="res://Sounds/NO/selvflgeligof-course.wav"
+dest_files=[ "res://.import/selvflgeligof-course.wav-11a27199e54d2bb19de5f80fdb1ee0fe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

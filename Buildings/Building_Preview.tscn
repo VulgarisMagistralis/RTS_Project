@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Building_Preview" type="KinematicBody2D"]
+
+[node name="Preview_Image" type="Sprite" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

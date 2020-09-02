@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gidiyom.wav-4dbe2c776cc4fc9d02d308061e7c2dd9.sample"
+
+[deps]
+
+source_file="res://Sounds/TR/gidiyom.wav"
+dest_files=[ "res://.import/gidiyom.wav-4dbe2c776cc4fc9d02d308061e7c2dd9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

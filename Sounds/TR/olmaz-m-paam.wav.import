@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/olmaz-m-paam.wav-7db17fcd645e844c256fb2f9185db68c.sample"
+
+[deps]
+
+source_file="res://Sounds/TR/olmaz-m-paam.wav"
+dest_files=[ "res://.import/olmaz-m-paam.wav-7db17fcd645e844c256fb2f9185db68c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
